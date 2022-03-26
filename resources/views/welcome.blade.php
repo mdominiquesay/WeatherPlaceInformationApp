@@ -13,7 +13,10 @@
         <div class="main">
             hello5
             <div id="app">
-                <weather-app></weather-app>
+                <div style='float:left'>
+                <div><weather-app></weather-app></div>
+                <div><placeinfo-app></placeInfo-app></div>
+</div>
             </div>
         </div>
     </body>

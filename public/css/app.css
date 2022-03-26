@@ -3,15 +3,11 @@
         min-height: 100vh;
         padding: 25px;
         background-image: linear-gradient(to bottom ,rgba(255, 255, 255, 0.25),rgba(0, 191, 255, 0.452));
-    }
-    .semibold
-    {
-        font-size: xx-large;
-        font-weight:bolder;
+        
     }
     .weather_icon
     {
-        height:10rem;
-    }
+        width:10rem;
+    } 
 
 

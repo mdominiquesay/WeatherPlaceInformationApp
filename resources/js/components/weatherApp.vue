@@ -1,11 +1,11 @@
 <template>
 
 
-    <div class="card" style="width:400px">
-        <img class="card-img-top weather_icon" v-bind:src='icon' alt="Weather">
-        <div class="card-body">
-            <h4 class="card-title ">{{  temp }}°C</h4>
-            <p class="card-text">{{description}}</p>
+    <div class="weather_main">
+        <img class=" weather_icon" v-bind:src='icon' alt="Weather">
+        <div class="weather-body">
+            <h4 class="weatherTemp ">{{  temp }}°C</h4>
+            <p class="weatherDescription">{{description}}</p>
         </div>
     </div>
  
