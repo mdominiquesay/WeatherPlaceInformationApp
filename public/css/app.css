@@ -1,97 +1,109 @@
-    body{
-       background: url('/images/heritage.jpg') ;
-       background-repeat:repeat-x;
-       background-size: cover;
-       background-attachment:fixed;
-       background-position: left top;
-       background-color: #2f2f3b;
-    }
-    .main{
-        
-        text-align:center;
-       height: 175rem;
-       width:95%;
-       margin: 0 auto;
-       background-color: rgba(0, 0, 0, 0.2);
-    }
-    .header{
-        height:10rem;
-        padding:3rem;
-        vertical-align: middle;
-        font-weight: bolder;
-        font-size:3rem;
-        color:rgb(235, 215, 101);
-    }
-    .nav{
-        margin-top:1rem;
-        text-align: center;
-        font-size: x-large;
-        border-radius:1px;
-        background-color: rgba(255, 255, 255, 0.712);
-    }
-    .dropdown-item{
-        font-size:1.5rem;
-    }
-    
-    .placeName
-    {
-        font-weight: bolder;
-        font-size:xx-large;
-        padding-bottom:1rem;
-    }
-    .address ,.weatherDescription
-    {
-        font-weight: bolder;
-        font-size:large;
-        padding-bottom:2rem;
-    }
-    .places
-    {
-        text-align: center;
-        
-    }
-    .weather_main
-    {
-        width:95%;
-        text-align: center;
-        padding-left:5rem;
-    }
-    .weather_icon
-    {
-        height:3.5rem;
-    }
-    .forecastDate{
-        font-weight: bold;
-        padding-top: 1rem;
-        vertical-align: middle;
-    } 
-    .weatherBox{
-        width:85%;
-        text-align: center;
-        display:block;
-        margin-top:1rem;
-        margin-bottom:1rem;
-        box-shadow: 3px 6px rgba(0,0,0,0.25);
-        border-radius:16px;
-        background-color: rgba(255, 255, 255, 0.938);
-    }
-    .box
-    {
-        display:inline-block;
-        width:95%;
-        padding:5rem;
-        margin-top:1rem;
-        margin-bottom:1rem;
-        box-shadow: 3px 6px rgba(0,0,0,0.25);
-        border-radius:16px;
-        background-color: rgba(255, 255, 255, 0.842);
-    }
-    .placeHeader
-    {
-        font-weight: bolder;
-        font-size:xx-large;
-        color:white;
-    }
+body{
+    background: url('/images/heritage.jpg') ;
+    background-repeat:repeat-x;
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: left top;
+    background-color: #2f2f3b;
+ }
+ .main{
+     
+     text-align:center;
+    height: 175rem;
+    width:95%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.2);
+ }
+ .header{
+     height:10rem;
+     padding:3rem;
+     vertical-align: middle;
+     font-weight: bolder;
+     font-size:3rem;
+     color:rgb(235, 215, 101);
+ }
+ .nav{
+     margin-top:1rem;
+     text-align: center;
+     font-size: x-large;
+     border-radius:1px;
+     background-color: rgba(255, 255, 255, 0.712);
+ }
+ .dropdown-item{
+     font-size:1.5rem;
+ }
+ 
+ .placeName
+ {
+     font-weight: bolder;
+     font-size:xx-large;
+     padding-bottom:1rem;
+ }
+ .address ,.weatherDescription
+ {
+     font-weight: bolder;
+     font-size:large;
+     padding-bottom:2rem;
+ }
+ .places
+ {
+     float:right;
+     text-align: center;
+     
+ }
+ .weather_main
+ {
+     width:95%;
+     text-align: center;
+     padding-left:5rem;
+ }
+ .weather_icon
+ {
+     height:5rem;
+ }
+ .place_icon{
+    min-height:6rem;
+    max-height:20rem;
+    margin:1rem;
+}
+ .forecastDate{
+     font-weight: bold;
+     padding-top: 1rem;
+     vertical-align: middle;
+ } 
+ .weatherBox{
+     float:left;
+     width:10rem;
+     text-align: center;
+     display:block;
+     margin-right: 1rem;
+     margin-left: 2rem;
+     margin-top:1rem;
+     margin-bottom:1rem;
+     box-shadow: 3px 6px rgba(0,0,0,0.25);
+     border-radius:16px;
+     background-color: rgba(255, 255, 255, 0.938);
+ }
+ .box
+ {
+     display:inline-block;
+     width:95%;
+     padding:5rem;
+     margin-top:1rem;
+     margin-bottom:1rem;
+     box-shadow: 3px 6px rgba(0,0,0,0.25);
+     border-radius:16px;
+     background-color: rgba(255, 255, 255, 0.842);
+ }
+ .placeHeader
+ {
+
+    display:block;
+     font-weight: bolder;
+     font-size:xx-large;
+     color:white;
+     
+ }
 
 
 

@@ -12,7 +12,7 @@ class WeatherController extends Controller
     {
         $apikey = config('services.weather.key');
         $url="http://api.openweathermap.org/data/2.5/forecast?";
-        $limit=7;
+        $limit=12;
         $response =Http::withHeaders([
             'Accept'=> 'application/json',
             'Authorization'=> $apikey

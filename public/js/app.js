@@ -28083,7 +28083,7 @@ var render = function () {
             _vm._l(places.img, function (images) {
               return _c("div", { key: images.id, staticClass: "col" }, [
                 _c("img", {
-                  staticClass: "weather_icon",
+                  staticClass: "place_icon",
                   attrs: { src: images },
                 }),
               ])
@@ -28128,8 +28128,10 @@ var render = function () {
       "div",
       { staticClass: "weather_main" },
       _vm._l(_vm.forecastList, function (forecast) {
-        return _c("div", { key: forecast.id, staticClass: "weatherBox row" }, [
-          _c("div", { staticClass: "col" }, [_vm._v(_vm._s(forecast.date))]),
+        return _c("div", { key: forecast.id, staticClass: "weatherBox " }, [
+          _c("div", { staticClass: "col forecastDate" }, [
+            _vm._v(_vm._s(forecast.date)),
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "col" }, [
             _c("img", {
@@ -28138,7 +28140,7 @@ var render = function () {
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "col forecastDate" }, [
             _vm._v(_vm._s(forecast.description)),
           ]),
         ])

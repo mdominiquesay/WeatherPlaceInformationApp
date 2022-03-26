@@ -3,12 +3,12 @@
         <div class="placeHeader">Weather Forecast for {{city}}</div>      
         <div class="weather_main">     
         
-            <div class="weatherBox row"  v-for="forecast in forecastList" :key="forecast.id">
+            <div class="weatherBox "  v-for="forecast in forecastList" :key="forecast.id">
                 <div class='col forecastDate'>{{  forecast.date }}</div>
                 <div class='col'>
                     <img class=" weather_icon" v-bind:src='forecast.icon' alt="Weather">
                 </div>
-                <div class='col'>{{  forecast.description }}</div>
+                <div class='col forecastDate'>{{  forecast.description }}</div>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
                 <div class="address">{{places.formatted_address}}</div>
                 <div class="row">
                     <div class="col" v-for="images in places.img" :key="images.id">
-                        <img class="weather_icon" v-bind:src='images'  >
+                        <img class="place_icon" v-bind:src='images'  >
                     </div>
                 </div>
             </div>
