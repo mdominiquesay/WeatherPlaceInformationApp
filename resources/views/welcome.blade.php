@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,27 @@
     </head>
     <body >
         <div class="main">
-            hello5
+            <div class="header">
+                Japan Travel information
+            </div>
+            <div class='nav'>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Travel Destinations</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="getWeather?city=Tokyo">Tokyo</a></li>
+                        <li><a class="dropdown-item" href="getWeather?city=Yokohama">Yokohama</a></li>
+                        <li><a class="dropdown-item" href="getWeather?city=Kyoto">Kyoto</a></li>
+                        <li><a class="dropdown-item" href="getWeather?city=Osaka">Osaka</a></li>
+                        <li><a class="dropdown-item" href="getWeather?city=Sapporo">Sapporo</a></li>
+                        <li><a class="dropdown-item" href="getWeather?city=Nagoya">Nagoya</a></li>
+                    </ul>
+                </li>
+            </div>
+                    
             <div id="app">
-                <div style='float:left'>
-                <div><weather-app></weather-app></div>
+                <div style=''>
+                
+                <div><weather-app></weather-app></div>    
                 <div><placeinfo-app></placeInfo-app></div>
 </div>
             </div>

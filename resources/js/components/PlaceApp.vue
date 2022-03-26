@@ -1,21 +1,18 @@
 <template>
 
 
-    <div class="card" style="width:400px">
-
-    <ul>
-        <li v-for="places in placesList" :key="places.id">
-            {{places.name}}
-            {{places.formatted_address}}
-            <img class="card-img-top weather_icon" v-bind:src='places.icon' >
-            <ul>
-                <li v-for="images in places.img" :key="images.id">
-                <img class="card-img-top weather_icon" v-bind:src='images' >
-                </li>
-            </ul>
-        </li>
-    </ul>
-    </div>
+        <div class='places'>
+            <div class="placeHeader">Places to Visit in {{city}}</div>
+            <div class='box' v-for="places in placesList" :key="places.id">
+                <div class="placeName">{{places.name}}</div>
+                <div class="address">{{places.formatted_address}}</div>
+                <div class="row">
+                    <div class="col" v-for="images in places.img" :key="images.id">
+                        <img class="weather_icon" v-bind:src='images'  >
+                    </div>
+                </div>
+            </div>
+        </div>
  
 </template>
 
@@ -27,12 +24,19 @@
         data(){
             return {
                 
-                   placesList:[]
+                   placesList:[],
+                   city:'Osaka'
             }
         },
         methods:{
+            
             fetchData(){
-                fetch('/placeInfo?country=JP&city=Osaka')
+                let urlParams = new URLSearchParams(window.location.search);
+                if(urlParams.has('city'))
+                {
+                    this.city=urlParams.get('city');
+                }
+                fetch('/placeInfo?country=JP&city='+this.city)
                 .then(
                     response => response.json())
                 .then(data => {
