@@ -8,7 +8,11 @@ use App\Models\Places;
 
 class PlacesController extends Controller
 {
-    
+    /** Request Place detals based on city and Country 
+     * @params $city - city name
+     * @params $country -country name
+     * @return array of list of places and details
+    */
     public function requestPlace($city,$country)
     {
         $apikey = config('services.place.key');
@@ -23,15 +27,12 @@ class PlacesController extends Controller
         
         foreach($return as $key=>$value)
         {
-            $place=new Places();
-
+            $place=new Places();           
             $place->setName($value['name']);
             $place->setFormatted_address($value['location']['formatted_address']);
             $img=ImageController::fetchImage($value['fsq_id']);
             $place->setImage($img);
-
-            $newReturn[$key]=$place->getData();
-            
+            $newReturn[$key]=$place->getData();       
         }
         return $newReturn;
     }
