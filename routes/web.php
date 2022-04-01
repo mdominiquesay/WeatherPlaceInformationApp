@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Http;
+
+
+use App\Http\Controllers\PlacesController;
+use App\Http\Controllers\WeatherController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +19,22 @@ use Illuminate\Support\Facades\Http;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/getWeather', function () {
+    $country="Japan";
+    $city=request('city');
+    return view('welcome');
+});
 Route::get('/weather', function () { 
-    $apikey = config('services.weather.key');
     $country=request('country');
     $city=request('city');
-    $response =Http::get("http://api.openweathermap.org/data/2.5/weather?q=$city,$country&APPID=$apikey");
-    return $response->json();
+    $newReturn=WeatherController::requestWeather($city,$country);
+    return $newReturn;
 });
+
+Route::get('/placeInfo', function () { 
+    $country=request('country');
+    $city=request('city');
+    $newReturn=PlacesController::requestPlace($city,$country);
+    return $newReturn;
+});
+

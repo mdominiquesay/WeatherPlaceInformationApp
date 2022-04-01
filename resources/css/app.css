@@ -1,12 +1,115 @@
+body{
+    background: url('https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.18169-9/10304497_586424444790014_3404755484942842147_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=cdbe9c&_nc_eui2=AeHk2wFnGS3sn_ZizCdx0onY4riyvEObKXjiuLK8Q5speAM9dvaunIBR-LlvaAPUyhM&_nc_ohc=cFU0q3KuuLwAX-bFbW2&_nc_ht=scontent.fmnl3-1.fna&oh=00_AT9qEu5Fg9MSB7QIrm6abwkHwDF3qV3ZYOHKdNnK-oEcKA&oe=62652674') ;
+    background-repeat:repeat-x;
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: left top;
+    background-color: #2f2f3b;
+ }
+ .main{
+     
+     text-align:center;
+    height: 175rem;
+    width:95%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.2);
+ }
+ .header{
+     height:10rem;
+     padding:3rem;
+     vertical-align: middle;
+     font-weight: bolder;
+     font-size:3rem;
+     font-size:200%;
+     color:rgb(235, 215, 101);
+ }
+ 
+ .nav{
+     margin-top:1rem;
+     text-align: center;
+     font-size: x-large;
+     border-radius:1px;
+     background-color: rgba(255, 255, 255, 0.712);
+ }
+ .dropdown-item{
+     font-size:1.5rem;
+ }
+ 
+ .placeName
+ {
+     font-weight: bolder;
+     font-size:xx-large;
+     padding-bottom:1rem;
+ }
+ .address ,.weatherDescription
+ {
+     font-weight: bolder;
+     font-size:large;
+     padding-bottom:2rem;
+ }
+ .places
+ {
+     text-align: center;
+     display:inline-block;
+ }
+ .weather_main
+ {
+     width:95%;
+     text-align: center;
+     padding-left:5rem;
+ }
+ .weather_icon
+ {
+     height:5rem;
+ }
+ .imagesGallery
+ {
+     float:left;
+     display:block;
+ }
+ .place_icon{
+    padding-left:1rem;
+    padding-right:1rem;
+    width:100%;
+    max-height:20rem;
+    margin:2rem;
+ }
+ .weatherBox{
+     padding-top: 1rem;
+     float:left;
+     width:10rem;
+     text-align: center;
+     display:block;
+     margin-right: 1rem;
+     margin-left: 2rem;
+     margin-top:1rem;
+     margin-bottom:1rem;
+     box-shadow: 3px 6px rgba(0,0,0,0.25);
+     border-radius:16px;
+     background-color: rgba(255, 255, 255, 0.938);
+ }
+ .box
+ {
+     
+     display:inline-block;
+     width:95%;
+     padding:5rem;
+     padding-top:2rem;
+     margin-top:1rem;
+     margin-bottom:1rem;
+     box-shadow: 3px 6px rgba(0,0,0,0.25);
+     border-radius:16px;
+     background-color: rgba(255, 255, 255, 0.842);
+ }
+ .placeHeader
+ {
 
-    .main{
-        min-height: 100vh;
-        padding: 25px;
-        background-image: linear-gradient(to bottom ,rgba(255, 255, 255, 0.25),rgba(0, 191, 255, 0.452));
-        
-    }
-    .weather_icon
-    {
-        height:10rem;
-    }
+    display:block;
+     font-weight: bolder;
+     font-size:xx-large;
+     color:white;
+     
+ }
+
+
 

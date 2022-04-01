@@ -1,48 +1,71 @@
 <template>
-
-
-    <div class="card" style="width:400px">
-        <img class="card-img-top weather_icon" v-bind:src='icon' alt="Weather">
-        <div class="card-body">
-            <h4 class="card-title ">{{  temp }}°C</h4>
-            <p class="card-text">{{description}}</p>
+  <div>
+    <div class="placeHeader">Weather Forecast for {{ city }}</div>
+    <div class="weather_main">
+      <div
+        class="weatherBox"
+        v-for="forecast in forecastList"
+        :key="forecast.id"
+      >
+        <div class="h6">{{ formatDate(forecast.date) }}</div>
+        <div>
+          <img class="weather_icon" v-bind:src="forecast.icon" alt="Weather" />
         </div>
+        <div class="h5">{{ converKtoC(forecast.temp) }}°C</div>
+        <div class="h6">{{ forecast.description }}</div>
+      </div>
     </div>
- 
+  </div>
 </template>
 
 <script>
-import Utility from '../utility.vue'
-    export default {
-        mounted() {
-            this.fetchData()
-        },
-        data(){
-            return {
-                
-                    icon: '',
-                    description:'',
-                    temp:''
-                
-            }
-        },
-        methods:{
-            fetchData(){
-                fetch('/weather?country=Japan&city=Osaka')
-                .then(
-                    response => response.json())
-                .then(data => {
-                    var iconcode = data.weather[0].icon;
-                    this.icon = "http://openweathermap.org/img/w/" + iconcode + ".png";
-                    this.description=data.weather[0].description;
-                    this.temp=this.converKtoC(data.main.temp);
-                })
-            },
-            converKtoC(valNum)
-            {
-                valNum = parseFloat(valNum);
-                return (valNum-273.15).toFixed(0);
-            }
-        }
-    }
+import moment from "moment";
+export default {
+  mounted() {
+    this.fetchData();
+  },
+  data() {
+    return {
+      forecastList: [],
+      city: "Osaka",
+      country: "Japan",
+    };
+  },
+  methods: {
+    /*
+                This function fetches Data  of Weather forcast by city and country parameters
+            */
+    fetchData() {
+      let urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("city")) {
+        this.city = urlParams.get("city");
+      }
+      if (urlParams.has("country")) {
+        this.country = urlParams.get("country");
+      }
+      fetch("/weather?country=" + this.country + "&city=" + this.city)
+        .then((response) => response.json())
+        .then((data) => {
+          this.forecastList = data;
+        });
+    },
+    /*
+                This function formats Date 
+                @params date - date for convertion
+                @return formatted date
+            */
+    formatDate(date) {
+      return moment(String(date)).format("ddd h:mm a");
+    },
+    /*
+                This function converts kelvin to Celcius
+                @params temp - temperature in kelvin
+                @return temperature in celcius
+            */
+    converKtoC(temp) {
+      temp = parseFloat(temp);
+      return (temp - 273.15).toFixed(0);
+    },
+  },
+};
 </script>
