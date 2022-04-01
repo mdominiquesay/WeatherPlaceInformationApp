@@ -26,6 +26,7 @@ class Places extends Model
         $return['name']=$this->name;
         $return['formatted_address']=$this->formatted_address;
         $return['img']=$this->image ;
+        
         return  $return;
     }
     
